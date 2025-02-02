@@ -17,13 +17,11 @@ struct FetchService {
     // https://breaking-bad-api-six.vercel.app/api/quotes/random?production=Breaking+Bad
     func fetchQuote(from show: String) async throws -> Quote {
         // Build fetch URL
-        let quoteURL = baseURL.appending(path: "/quotes/random?production=Breaking+Bad")
-        print(quoteURL)
+        let quoteURL = baseURL.appending(path: "quotes/random")
         let fetchURL = quoteURL.appending(queryItems: [URLQueryItem(name: "production", value: show)])
-        print(fetchURL)
+
         // Fetch data
         let (data, response) = try await URLSession.shared.data(from: fetchURL)
-        print(data)
         
         // Handle response
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
@@ -32,7 +30,7 @@ struct FetchService {
         
         // Decode data
         let quote = try JSONDecoder().decode(Quote.self, from: data)
-        print(quote)
+
         // Return quote
         return quote
     }
