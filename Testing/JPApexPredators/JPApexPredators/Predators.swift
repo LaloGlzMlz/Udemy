@@ -47,6 +47,7 @@ class Predators {
                 predator1.id < predator2.id
             }
         }
+//        print(apexPredators.first)
     }
     
     func filter(by type: APType) {

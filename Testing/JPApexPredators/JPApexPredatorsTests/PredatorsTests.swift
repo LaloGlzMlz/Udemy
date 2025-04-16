@@ -89,4 +89,9 @@ final class PredatorsTests: XCTestCase {
         predators.filter(by: .all)
         XCTAssertEqual(predators.apexPredators.count, 3)
     }
+    
+//    func testSortAlphabetically() {
+//        predators.sort(by: alphabetical)
+//        XCTAssertEqual(predators.apexPredators.first?.name, "Megalodon")
+//    }
 }

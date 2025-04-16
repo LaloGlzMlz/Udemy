@@ -21,7 +21,7 @@ struct PersistenceController {
         samplePokemon.types = ["grass", "poison"]
         samplePokemon.hp = 45
         samplePokemon.attack = 49
-        samplePokemon.deffense = 49
+        samplePokemon.defense = 49
         samplePokemon.specialAttack = 65
         samplePokemon.specialDefense = 65
         samplePokemon.speed = 45
